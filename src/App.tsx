@@ -88,12 +88,12 @@ export const App: React.FC = () => {
           Reverse
         </button>
 
-        {(sortType !== '' || reverseField) && (
+        {(sortType !== SortType.Default || reverseField) && (
           <button
             type="button"
             className="button is-danger is-light"
             onClick={() => {
-              setSortType('');
+              setSortType(SortType.Default);
               setReverseField(false);
             }}
           >
